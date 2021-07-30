@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
 def hello(request):
-    return render(request, 'hello.html', {'message':'Hello World'})
+    return render(request, 'hello.html', {'message': 'Hello World'})
