@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+
+        {% for blog in blog_list %}
+            <div class="card">
+                <h5 class="card-header">{{ blog.category }}</h5>
+                <div class="card-body">
+                    <h5 class="card-title">{{ blog.title }}</h5>
+                    <h6 class="card-title">{{ blog.postdate }}</h6>
+                    <a href="{% url 'detail' blog.pk %}" class="btn btn-primary">詳細へ</a>
+                </div>
+            </div>
+        {% endfor %}
+    
+    </div>
+{% endblock content %}

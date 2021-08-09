@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+            <div class="card">
+                <h5 class="card-header">{{ blog.category }}</h5>
+                <div class="card-body">
+                    <h5 class="card-title">{{ blog.title }}</h5>
+                    <h6 class="card-text">{{ blog.content }}</h6>
+                    <a href="{% url 'list' %}" class="btn btn-primary">一覧へ</a>
+                </div>
+            </div>
+    </div>
+{% endblock content %}
