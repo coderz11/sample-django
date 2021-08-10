@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="container">
-
+    <a href="{% url 'create' %}" class="btn btn-primary">新規作成</a>
         {% for blog in blog_list %}
             <div class="card">
                 <h5 class="card-header">{{ blog.category }}</h5>

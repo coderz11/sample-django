@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="card-body">
+            <form action="{% url 'create' %}" method="post">
+                {% csrf_token %}
+                <p>title</p>
+                <input type="text" name="title">
+                <br><br>
+                <p>content</p>
+                <textarea name="content"></textarea>
+                <br><br>
+                <input type="submit" value="新規作成する">
+            </form>
+        </div>
+    </div>
+{% endblock content %}

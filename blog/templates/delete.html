@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="card-body">
+            <form action="{% url 'delete' blog.pk %}" method="post">
+                {% csrf_token %}
+                <p>title</p>{{ blog.title }}
+                <br>
+                <br>
+                <p>content</p>{{ blog.content }}
+                <br>
+                <br>
+                <input type="submit" value="削除する">
+            </form>
+        </div>
+    </div>
+{% endblock content %}
