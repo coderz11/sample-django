@@ -14,3 +14,8 @@ def loginview(request):
             return render(request, 'login.html', {'errormsg':'usernameまたはpasswordが一致しません'})
 
     return render(request, 'login.html')
+
+def logoutview(request):
+    logout(request)
+    return redirect('login')
+        
